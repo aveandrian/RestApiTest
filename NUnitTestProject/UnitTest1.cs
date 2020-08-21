@@ -130,6 +130,7 @@ namespace Tests
 
       var request = new ApiRequest<TestResult>(BaseUrl.AbsoluteUri);
       request.SetEndpoint("testresults/{id}");
+
       request.SetUrlSegment("id", _request.GetResponse().Id.ToString());
       request.SetMethod(Method.DELETE);
       request.Execute();
